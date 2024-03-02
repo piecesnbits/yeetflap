@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bera Flap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="Piecesnbits" />
+    <meta name="keywords" content="flappy bird flap wing pipe create creator Dong Nguyen iphone game android game create your own game" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="Barry flap game" />
+    <meta property="og:type" content="website" />
+
+    <script language="JavaScript">
+      var bird_picture = "default/yeetard.png?v=3";
+      var tube1_picture = "default/tube3.png?v=14111";
+      var tube2_picture = "default/tube2.png?v=41116.png";
+      var ground_picture = "default/ground3.png?v=2222";
+      var bg_picture = "default/bg3.png";
+      var game_over_fillcolor = "#000";
+      var game_over_strokecolor = "#fff";
+      var score_fillcolor = "#000";
+      var score_strokecolor = "#fff";
+      var title_fillcolor = "#000";
+      var title_strokecolor = "#fff";
+
+      var wing_sfx = "default/yeet2.mp3";
+      var point_sfx = "default/sfx_point.mp3";
+      var hit_sfx = "default/sfx_hit.mp3";
+      var die_sfx = "default/sfx_die.mp3";
+      var swooshing_sfx = "default/sfx_swooshing.mp3";
+
+      var game_title = "Yeet Flap";
+      var game_instructions = "Tap/Click to Jump";
+
+      var game_over = "GAMEOVER";
+      var high_score = "HIGH SCORE";
+      var try_again = "try again";
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+      if (inIframe()) {
+        console.log("running in iframe");
+      } else {
+        console.log("running in window");
+        // document.querySelector("#loading").style.display = "none";
+      }
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #000;
+      }
+
+      #screen canvas {
+        margin: 0 auto;
+      }
+
+      #loading {
+        position: absolute;
+        font-family: "Verdana";
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        top: 50%;
+        display: none;
+      }
+    </style>
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" /> -->
+
+    <!-- Font Awesome -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body style="background-color: black">
+    <div id="loading">Loading...</div>
+    <div id="screen"></div>
+  </body>
+
+  <!-- Flappy Bird Game -->
+  <script src="flappy.min.js"></script>
+</html>
